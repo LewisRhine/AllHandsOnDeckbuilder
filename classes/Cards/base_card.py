@@ -21,7 +21,7 @@ class FireTorpedoes(BaseCard):
         type=CardType.attack,
         cost_to_play=1,
         name="fire torpedoes!",
-        effect_text="target targe that explosion and fire!",
+        effect_text="Target that explosion and fire!",
     ):
         super().__init__(type, cost_to_play, name, effect_text)
 
@@ -57,37 +57,3 @@ class ShieldsUp(BaseCard):
         effect_text="Plus 5 to shields",
     ):
         super().__init__(type, cost_to_play, name, effect_text)
-
-
-fire_torpedoes = FireTorpedoes(
-    # CardType.attack,
-    # 1,
-    # "fire torpedoes!",
-    # "target targe that explosion and fire!",
-)
-
-fire_lasers = FireLasers(
-    # CardType.attack,
-    # 1,
-    # "Fire Lasers!",
-    # "Activate Laser attack for ONE round",
-)
-
-power_to_the_engines = PowerToTheEngines(
-    # CardType.move,
-    # 1,
-    # "Power to the engines!",
-    # "I am a leaf on the wind... Watch how I soar…!",
-)
-
-shields_up = ShieldsUp(
-    # CardType.defense,
-    # 1,
-    # "Shields Up!!",
-    # "Plus 5 to shields",
-)
-
-# print(fire_torpedoes.__dict__)
-# print(fire_lasers.__dict__)
-# print(power_to_the_engines.__dict__)
-print(shields_up.__dict__)
