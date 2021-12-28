@@ -10,7 +10,7 @@ class Player(Ship):
         # the ship class only works with images that are pointing up.
         # Since our ship asset point to the right we need to rotate the image by 90 to start off
         self.image = pygame.transform.rotate(self.image, 90)
-        super().__init__(x, y, 3)
+        super().__init__(x, y, 3, 100)
         self.power_to_engines(3)
 
     def player_input(self):

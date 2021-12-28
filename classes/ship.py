@@ -4,8 +4,9 @@ import math, pygame
 
 
 class Ship(pygame.sprite.Sprite):
-    def __init__(self, x: int, y: int, power_allotment: int, rotations: int = 360):
+    def __init__(self, x: int, y: int, power_allotment: int, hull_integrity: int, rotations: int = 360):
         super().__init__()
+        self._hull_integrity = hull_integrity
         self._power_allotment: int = power_allotment
         self._engine_power: int = 0
         self._shielding_power: int = 0
@@ -25,6 +26,16 @@ class Ship(pygame.sprite.Sprite):
         self._speed = 0
         self._velocity = pygame.math.Vector2(0, 0)
         self._position = pygame.math.Vector2(x, y)
+
+    @property
+    def hull_integrity(self):
+        return self._hull_integrity
+
+    @hull_integrity.setter
+    def hull_integrity(self, value: int):
+        self._hull_integrity = value
+        if self._hull_integrity <= 0:
+            print(f'ship {self.__class__.__name__} destroyed')
 
     # ----------------------------------------------------
     # these are read only props because we want things outside this class to only be able to use the "power_to" method
