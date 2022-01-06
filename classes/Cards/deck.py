@@ -12,23 +12,8 @@ class Deck:
         else:
             print("Deck is full")
 
-        # print(f" {len(self._deck)} {self._deck}")
-
     def shuffle_deck(self):
         random.shuffle(self._deck)
 
     def draw_card(self):
         return self._deck.pop(-1)
-
-
-# d = Deck()
-# d.add_to_deck(base_card.FireTorpedoes())
-# d.add_to_deck(base_card.FireLasers())
-# d.add_to_deck(base_card.PowerToTheEngines())
-# d.add_to_deck(base_card.ShieldsUp())
-# print(d._deck[0].cost_to_play)
-# print(f" {len(d._deck)} {d._deck}")
-# d.shuffle_deck()
-# print(f"deck: {d._deck}")
-# print(d.draw_card())
-# print(f"deck: {d._deck}")

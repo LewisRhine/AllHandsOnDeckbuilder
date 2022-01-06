@@ -28,6 +28,3 @@ class Hand:
     def play_card(self, card):
         self._hand.remove(card)
         self.discard_pile.add_to_discard_pile(card)
-
-
-Hand.discard_card(DiscardPile())
