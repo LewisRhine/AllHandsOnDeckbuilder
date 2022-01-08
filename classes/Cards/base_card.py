@@ -14,6 +14,9 @@ class BaseCard:
         self.name = name
         self.effect_text = effect_text
 
+    def __str__(self) -> str:
+        return self.name
+
 
 class FireTorpedoes(BaseCard):
     def __init__(
