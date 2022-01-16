@@ -1,4 +1,4 @@
-import base_card
+from classes.Cards.base_card import BaseCard
 import random
 
 

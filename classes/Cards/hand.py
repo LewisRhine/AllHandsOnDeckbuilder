@@ -1,5 +1,5 @@
-import base_card
-import deck
+from classes.Cards.base_card import BaseCard
+from classes.Cards.deck import Deck
 
 # place holder for cards that have been played
 class PlayedCards:
