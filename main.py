@@ -30,6 +30,16 @@ player_deck.add_to_deck(classes.Cards.base_card.PowerToTheEngines())
 player_deck.add_to_deck(classes.Cards.base_card.ShieldsUp())
 player_deck.add_to_deck(classes.Cards.base_card.ShieldsUp())
 player_deck.shuffle_deck()
+player_discard_pile = classes.Cards.hand.DiscardPile()
+player_hand = classes.Cards.hand.Hand(
+    discard_pile=player_discard_pile,
+)
+player_hand.add_to_hand(player_deck.draw_card())
+player_hand.add_to_hand(player_deck.draw_card())
+player_hand.add_to_hand(player_deck.draw_card())
+player_hand.add_to_hand(player_deck.draw_card())
+player_hand.add_to_hand(player_deck.draw_card())
+print(player_hand._hand)
 
 
 while True:
