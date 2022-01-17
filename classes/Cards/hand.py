@@ -9,12 +9,18 @@ class PlayedCards:
 
 # place holder for discarded cards
 class DiscardPile:
-    def add_to_discard_pile(card):
-        pass
+    def __init__(self) -> None:
+        self._discard_pile = []
+
+    def add_to_discard_pile(self, card):
+        self._discard_pile.append(card)
 
 
 class Hand:
-    def __init__(self, discard_pile: DiscardPile, played_cards: PlayedCards) -> None:
+    def __init__(
+        self,
+        discard_pile: DiscardPile,
+    ):  # played_cards: PlayedCards) -> None:
         self._hand = []
         self.discard_pile = discard_pile
 
