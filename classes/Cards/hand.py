@@ -15,6 +15,13 @@ class DiscardPile:
     def add_to_discard_pile(self, card):
         self._discard_pile.append(card)
 
+    def send_to_deck(self):
+        self._return_pile = []
+        self._return_pile = self._discard_pile
+        self._discard_pile = []
+        print("sent to deck")
+        return self._return_pile
+
 
 class Hand:
     def __init__(
@@ -30,6 +37,12 @@ class Hand:
     def discard_card(self, card):
         self._hand.remove(card)
         self.discard_pile.add_to_discard_pile(card)
+
+    def discard_hand(self):
+        print(len(self._hand))
+        while len(self._hand) > 0:
+            self.discard_card(self._hand[-1])
+            print(f"card discarded ")
 
     def play_card(self, card):
         self._hand.remove(card)

@@ -16,4 +16,5 @@ class Deck:
         random.shuffle(self._deck)
 
     def draw_card(self):
+        print("drawing card")
         return self._deck.pop(-1)
