@@ -1,4 +1,4 @@
-import base_card
+from classes.Cards.base_card import BaseCard
 import random
 
 
@@ -16,4 +16,5 @@ class Deck:
         random.shuffle(self._deck)
 
     def draw_card(self):
+        print("drawing card")
         return self._deck.pop(-1)
